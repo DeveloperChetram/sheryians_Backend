@@ -1,6 +1,7 @@
 const express = require('express')
 const connectToDB = require('./src/db/db')
 const app = express();
+const cors = require('cors');
 connectToDB()
 
 app.listen(3000,()=>{

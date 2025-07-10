@@ -2,8 +2,10 @@ const express = require('express')
 const connectToDB = require('./src/db/db')
 const noteModel = require('./src/models/notes.model')
 const app = express()
+const cors = require('cors')
 
 connectToDB()
+app.use(cors())
 app.use(express.json())
 app.get('/',(req,res)=>{
     res.send('server is running')
